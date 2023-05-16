@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/* ------------
+Sidebar
+--------------- */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background-color: #fe8181;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+
+.sidebar.active {
+    width: 240px;
+}
+
+.sidebar .logo-box .logo {
+    margin: 20px 0px;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .logo-box .logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.sidebar .logo-box .logo .logo-img {
+    height: 100%;
+    width: 35%;
+}
+
+.sidebar .logo-box .logo .logo-img img {
+    height: 60px;
+    width: 95%;
+}
+
+.sidebar .logo-box .logo .logo-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar .logo-box .logo .logo-name span {
+    color: #fff;
+}
+
+.sidebar .logo-box .logo .logo-name span:first-child {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.sidebar .logo-box .logo .logo-name span:last-child {
+    font-size: 15px;
+    margin-top: -13px;
+    letter-spacing: 2px;
+}
+
+.sidebar .bx-menu {
+    position: absolute;
+    color: #fff;
+    left: 55%;
+    top: 30px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active .bx-menu {
+    left: 90%;
+}
+
+.sidebar .menu .list-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.sidebar .menu .list-item:last-child {
+    top: 220px;
+}
+
+.sidebar .menu .list-item a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0 20px;
+    line-height: 50px;
+    border-radius: 8px;
+}
+
+.sidebar .menu .list-item a {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .menu .list-item a:hover {
+    background-color: #fff;
+    color: rgb(107, 8, 28);
+}
+
+.sidebar .menu .list-item i {
+    margin-right: 15px;
+}
+
+.sidebar.active .menu .list-item span {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+}
+
+.sidebar .menu .list-item span {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar .menu .list-item span .arrow {
+    position: absolute;
+    right: 0;
+    transition: all 0.3s ease;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.sidebar .menu .list-item .sub-menu {
+    background-color: rgb(165, 11, 44);
+    display: none;
+    border-radius: 10px;
+}
+
+.sidebar .menu .list-item .sub-menu a {
+    padding-left: 53px;
+}
+
+.header {
+    font-weight: bold;
+}
+
+
+/* ------------
+Dashboard
+--------------- */
+
+.sidebar.active~main {
+    margin-left: 240px;
+}
+
+main {
+    margin-left: 80px;
+    transition: all 0.5s ease;
+}
+
+main .card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all 0.5s ease;
+}
+
+main .card.active:hover {
+    background-color: #fe8181;
+    color: #fff;
+}
+
+main .card .icons i {
+    font-size: 40px;
+    /* color: #fe8181; */
+}
